@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default to Engineer Mode */
+  --background: #0a0a0a;
+  --foreground: #e0e0e0;
+  --surface: #121212;
+  --accent: #00f0ff;
+  --accent-secondary: #0088ff;
+}
+
+[data-mode="community"] {
+  --background: #050505;
+  --foreground: #ffffff;
+  --surface: rgba(255, 255, 255, 0.05);
+  --accent: #bd00ff;
+  --accent-secondary: #ff5e00;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
