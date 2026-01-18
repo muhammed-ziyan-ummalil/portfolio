@@ -2,7 +2,7 @@
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Float, Stars, Text, Text3D, Center } from "@react-three/drei";
-import * as random from "maath/random/dist/maath-random.esm";
+import * as random from "maath/random";
 import { useState, useRef, useMemo } from "react";
 import * as THREE from "three";
 
